@@ -5,6 +5,7 @@
 
 using Dicom;
 using EnsureThat;
+using Microsoft.Health.Dicom.Core.Features.Validation;
 
 namespace Microsoft.Health.Dicom.Core.Features.Store
 {
@@ -16,6 +17,8 @@ namespace Microsoft.Health.Dicom.Core.Features.Store
             try
             {
                 dicomItem.Validate();
+
+                ImplicitValueRepresentationValidator.Validate(dicomItem);
             }
             catch (DicomValidationException ex)
             {

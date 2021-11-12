@@ -111,5 +111,14 @@ namespace Microsoft.Health.Dicom.Core.Exceptions
             return new ElementValidationException(name, vr, ValidationErrorCode.UnexpectedVR, message);
         }
 
+        public static ElementValidationException CreateImplicitVRException(string name, DicomVR vr)
+        {
+            EnsureArg.IsNotNull(name, nameof(name));
+            EnsureArg.IsNotNull(vr, nameof(vr));
+
+            var message = string.Format(CultureInfo.InvariantCulture, DicomCoreResource.ImplicitVRCodeNotAllowed, name, vr);
+
+            return new ElementValidationException(name, vr, ValidationErrorCode.ImplicitVRNotAllowed, message);
+        }
     }
 }

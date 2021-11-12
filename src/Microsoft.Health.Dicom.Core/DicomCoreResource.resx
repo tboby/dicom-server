@@ -468,4 +468,8 @@ For details on valid range queries, please refer to Search Matching section in C
   <data name="DataPartitionFeatureCannotBeDisabled" xml:space="preserve">
     <value>Data partitions feature cannot be disabled while existing data has already been partitioned.</value>
   </data>
+  <data name="ImplicitVRCodeNotAllowed" xml:space="preserve">
+    <value>Implicit Value Representation is not allowed. Error in Dicom Tag {0}.</value>
+    <comment>{0} Dicom Tag</comment>
+  </data>
 </root>

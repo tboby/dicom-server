@@ -98,5 +98,16 @@ namespace Microsoft.Health.Dicom.Core.Features.Validation
         /// Time element has invalid value.
         /// </summary>
         TimeIsInvalid = 1400,
+
+        /// <summary>
+        /// Implicit Value Representations not allowed.
+        /// </summary>
+        /// <remarks>
+        /// DICOM Web Services only support representations with explicit Value Representations.
+        /// Implicit Value Representations shall not be used.
+        /// <br/>
+        /// Reference: 8.6.2.1 Web Service Constraints - http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_8.6.2.1
+        /// </remarks>
+        ImplicitVRNotAllowed = 1500,
     }
 }
